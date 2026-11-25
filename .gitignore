@@ -1,0 +1,33 @@
+# Credenciales y exportaciones privadas
+*.env
+.env.*
+!.env.example
+!.env.*.example
+*.turnstile
+*.rotated
+/.aws/
+
+# Dependencias y paquetes generados
+/vendor/
+/dist/
+
+# Datos locales del módulo
+/instance/
+/storage/
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.log
+
+# Cachés de pruebas y análisis
+/.phpunit.cache/
+/.phpunit.result.cache
+/.phpcs.cache
+/coverage/
+
+# Archivos del sistema y ajustes locales
+.DS_Store
+/.claude/settings.local.json

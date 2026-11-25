@@ -1,0 +1,11 @@
+parameters:
+    level: 5
+    # Run in-process on hosts that restrict local sockets.
+    parallel:
+        maximumNumberOfProcesses: 0
+    paths:
+        - src
+        - public
+        - bin
+        - config
+        - tools

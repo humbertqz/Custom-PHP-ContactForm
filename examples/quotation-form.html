@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario de cotización</title>
+    <script src="/contact/assets/contact.js" defer></script>
+</head>
+<body>
+<h1>Formulario de cotización</h1>
+<section>
+<h2>Solicitud de cotización</h2>
+<form action="/contact/contact.php" method="post" data-contact-form data-form-id="quotation" data-endpoint="/contact/contact.php"
+      data-config-endpoint="/contact/config.php">
+    <p><label for="quote-name">Nombre</label>
+       <input id="quote-name" name="name" autocomplete="name" maxlength="150" required
+              aria-describedby="quote-name-error">
+       <span id="quote-name-error" data-contact-error-for="name"></span></p>
+    <p><label for="quote-email">Correo electrónico</label>
+       <input id="quote-email" name="email" type="email" autocomplete="email" required
+              aria-describedby="quote-email-error">
+       <span id="quote-email-error" data-contact-error-for="email"></span></p>
+    <p><label for="quote-company">Empresa</label>
+       <input id="quote-company" name="company" autocomplete="organization"></p>
+    <p><label for="quote-service">Servicio</label>
+       <select id="quote-service" name="service" required aria-describedby="quote-service-error">
+           <option value="">Selecciona un servicio</option>
+           <option value="web-design">Diseño web</option>
+           <option value="ecommerce">Comercio electrónico</option>
+           <option value="seo">SEO</option>
+       </select>
+       <span id="quote-service-error" data-contact-error-for="service"></span></p>
+    <p><label for="quote-message">Mensaje</label>
+       <textarea id="quote-message" name="message" maxlength="5000" required
+                 aria-describedby="quote-message-error"></textarea>
+       <span id="quote-message-error" data-contact-error-for="message"></span></p>
+    <div data-contact-turnstile></div>
+    <button type="submit">Enviar mensaje</button>
+    <p data-contact-feedback aria-live="polite"></p>
+</form>
+</section>
+</body>
+</html>

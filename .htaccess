@@ -1,0 +1,3 @@
+# Block the source checkout when it sits below an Apache document root.
+# Serve only public/ through an explicitly configured document root.
+Require all denied

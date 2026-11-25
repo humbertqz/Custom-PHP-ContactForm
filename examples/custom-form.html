@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario personalizado</title>
+    <script src="/contact/assets/contact.js" defer></script>
+</head>
+<body>
+<h1>Formulario personalizado</h1>
+<section>
+<h2>Soporte</h2>
+<form action="/contact/contact.php" method="post" data-contact-form data-form-id="support" data-endpoint="/contact/contact.php"
+      data-config-endpoint="/contact/config.php">
+    <p><label for="support-name">Nombre</label>
+       <input id="support-name" name="name" autocomplete="name" maxlength="150" required
+              aria-describedby="support-name-error">
+       <span id="support-name-error" data-contact-error-for="name"></span></p>
+    <p><label for="support-email">Correo electrónico</label>
+       <input id="support-email" name="email" type="email" autocomplete="email" required
+              aria-describedby="support-email-error">
+       <span id="support-email-error" data-contact-error-for="email"></span></p>
+    <fieldset>
+        <legend>Áreas de interés</legend>
+        <label><input type="checkbox" name="topics[]" value="billing"> Facturación</label>
+        <label><input type="checkbox" name="topics[]" value="support"> Soporte</label>
+    </fieldset>
+    <p><label for="support-message">Mensaje</label>
+       <textarea id="support-message" name="message" maxlength="5000" required
+                 aria-describedby="support-message-error"></textarea>
+       <span id="support-message-error" data-contact-error-for="message"></span></p>
+    <div data-contact-turnstile></div>
+    <button type="submit">Enviar mensaje</button>
+    <p data-contact-feedback aria-live="polite"></p>
+</form>
+</section>
+</body>
+</html>
